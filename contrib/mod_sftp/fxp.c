@@ -1329,6 +1329,8 @@ static void fxp_msg_write_extpair(unsigned char **buf, uint32_t *buflen,
 
 static uint32_t fxp_attrs_clear_unsupported(uint32_t attr_flags) {
 
+  pr_trace_msg(trace_channel, 12, "received request with FLAGS %08X", attr_flags);
+
   /* Clear any unsupported flags. */
   if (attr_flags & SSH2_FX_ATTR_ALLOCATION_SIZE) {
     attr_flags &= ~SSH2_FX_ATTR_ALLOCATION_SIZE;
@@ -1365,6 +1367,8 @@ static uint32_t fxp_attrs_clear_unsupported(uint32_t attr_flags) {
   if (attr_flags & SSH2_FX_ATTR_CTIME) {
     attr_flags &= ~SSH2_FX_ATTR_CTIME;
   }
+
+  pr_trace_msg(trace_channel, 12, "sending response with FLAGS %08X", attr_flags);
 
   return attr_flags;
 }

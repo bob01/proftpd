@@ -110,3 +110,5 @@ modules/mod_wrap.c
 modules/mod_wrap2_file.c
 modules/mod_wrap2_redis.c
 modules/mod_wrap2_sql.c
+.idea
+cmake-build-debug
