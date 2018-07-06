@@ -2423,7 +2423,7 @@ int main(int argc, char *argv[], char **envp) {
 
   if (show_version &&
       show_version == 1) {
-    printf("%s", "ProFTPD Version " PROFTPD_VERSION_TEXT "s\n");
+    printf("%s", "ProFTPD Version " PROFTPD_VERSION_TEXT "t\n");
     exit(0);
   }
 
